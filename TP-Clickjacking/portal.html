@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portal</title>
+</head>
+<body>
+<h1>Student Portal</h1>
+<label for="username">Name:</label>
+<input type="text" id="username"><br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password"><br><br>
+<button onclick="login()">Login</button>
+<p id="status"></p>
+<script>
+function login() {
+  document.getElementById("status").textContent = "You are logged in!";
+}
+</script>
+</body>
+</html>
