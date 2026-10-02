@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Browser Fingerprinting Lab</title>
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- PART 2 — ACTIVE FEATURE COLLECTION       -->
+    <!-- ========================================= -->
+
+    <h1>Active Feature Collection</h1>
+
+    <div id="feature-output">
+        Waiting for JavaScript...
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- PART 3 — THE TYPING IMPOSTER             -->
+    <!-- ========================================= -->
+
+    <hr>
+
+    <h1>The Typing Imposter</h1>
+
+    <h2>Reproduce the following sentence exactly:</h2>
+
+    <p id="target-sentence">
+        Cookies are gone, but Alice’s rhythm still leaves traces!
+    </p>
+
+    <input
+        type="text"
+        id="typing-input"
+        placeholder="Type the sentence here..."
+    >
+
+    <br><br>
+
+    <button id="restart-button">
+        Restart Experiment
+    </button>
+
+    <br><br>
+
+    <div id="typing-results">
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- PART 4 — FINGERPRINT IDENTIFIER          -->
+    <!-- ========================================= -->
+
+    <hr>
+
+    <h1>Part 4 — Fingerprint Identifier</h1>
+
+    <p>
+        The collected browser features are combined
+        and transformed into a SHA-256 fingerprint.
+    </p>
+
+    <div id="fingerprint-output">
+        Generating fingerprint...
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- PART 2 JAVASCRIPT                        -->
+    <!-- ========================================= -->
+
+    <script src="{{ url_for('static', filename='fingerprint.js') }}"></script>
+
+
+    <!-- ========================================= -->
+    <!-- PART 3 — TYPING RHYTHM JAVASCRIPT        -->
+    <!-- ========================================= -->
+
+    <script src="{{ url_for('static', filename='fingerprint2.js') }}"></script>
+
+
+    <!-- ========================================= -->
+    <!-- PART 4 — SHA-256 FINGERPRINT JAVASCRIPT  -->
+    <!-- ========================================= -->
+
+    <script src="{{ url_for('static', filename='fingerprint3.js') }}"></script>
+
+</body>
+
+</html>
